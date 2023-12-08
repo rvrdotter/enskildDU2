@@ -14,14 +14,21 @@ function render_header(parent) {
     </div>
     <div class="headerPicture"></div>
   `;
+  let citiesOrCountries = [COUNTRIES, CITIES];
+
+  randomCitiesOrCountriesOne = array_random_element(citiesOrCountries);
+  randomCitiesOrCountriestwo = array_random_element(citiesOrCountries);
+  randomCitiesOrCountriesThree = array_random_element(citiesOrCountries);
+
   let first = header.querySelector("div:nth-child(1)");
   let second = header.querySelector("div:nth-child(2)");
   let third = header.querySelector("div:nth-child(3)");
-  let picOne = array_random_element(COUNTRIES);
+
+  let picOne = array_random_element(randomCitiesOrCountriesOne);
   picOne = array_random_element(picOne.imagesNormal);
-  let picScnd = array_random_element(COUNTRIES);
+  let picScnd = array_random_element(randomCitiesOrCountriestwo);
   picScnd = array_random_element(picScnd.imagesNormal);
-  let picThrd = array_random_element(COUNTRIES);
+  let picThrd = array_random_element(randomCitiesOrCountriesThree);
   picThrd = array_random_element(picThrd.imagesNormal);
 
   first.style.backgroundImage = "url(media/geo_images/" + picOne + ")";
